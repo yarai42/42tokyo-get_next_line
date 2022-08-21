@@ -9,7 +9,7 @@ int	main(void) {
 	for (size_t i = 0; s; i++)
 	{
 		s = get_next_line(fd);
-		printf("line%zu: %s : %p\n", i, s, s);
+		printf("line%zu: %s\n", i, s);
 		free(s);
 	}
 	close(fd);
