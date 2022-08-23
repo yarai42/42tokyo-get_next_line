@@ -1,7 +1,0 @@
-aaaaaa
-ccccc
-dddd
-55555\n5555
-66666\077777
-sample.txt
-imagine.img
