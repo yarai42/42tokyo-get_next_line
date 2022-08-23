@@ -6,7 +6,7 @@
 /*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 20:56:21 by yarai             #+#    #+#             */
-/*   Updated: 2022/08/22 01:28:09 by yarai            ###   ########.fr       */
+/*   Updated: 2022/08/22 19:01:17 by yarai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,10 @@ static char	*read_line(int	fd, char	**save)
 	{
 		flag = read(fd, buf, BUFFER_SIZE);
 		if (flag == -1)
+		{
+			free(buf);
 			return (return_and_free(save));
+		}
 		buf[flag] = '\0';
 		tmpjoin = ft_strjoin(*save, buf);
 		free(*save);
@@ -73,7 +76,7 @@ static char	*read_line(int	fd, char	**save)
 	}
 	free(buf);
 	if (!save || !*save)
-		return (NULL);
+		return (return_and_free(save));
 	return (next_line(save));
 }
 
