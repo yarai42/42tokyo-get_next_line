@@ -6,7 +6,7 @@
 /*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 20:57:29 by yarai             #+#    #+#             */
-/*   Updated: 2022/08/22 01:38:49 by yarai            ###   ########.fr       */
+/*   Updated: 2022/10/02 12:57:56 by yarai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char		*ft_strjoin(char const	*s1, char const	*s2);
 char		*ft_strldup(const char	*s1, size_t	l);
 size_t		ft_strlen(char const	*s);
-char		*ft_strchr(const char	*s, int	c);
+char		*ft_strchr(const char	*s, int c);
 
 size_t	ft_strlen(char const	*s)
 {
@@ -29,7 +29,7 @@ size_t	ft_strlen(char const	*s)
 	return (i);
 }
 
-char	*ft_strchr(const char	*s, int	c)
+char	*ft_strchr(const char	*s, int c)
 {
 	size_t	i;
 

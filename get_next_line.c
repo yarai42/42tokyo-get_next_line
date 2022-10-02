@@ -6,15 +6,15 @@
 /*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 20:56:21 by yarai             #+#    #+#             */
-/*   Updated: 2022/08/22 19:01:17 by yarai            ###   ########.fr       */
+/*   Updated: 2022/10/02 12:58:55 by yarai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 #include <stdio.h>
 
-char		*get_next_line(int	fd);
-static char	*read_line(int	fd, char	**save);
+char		*get_next_line(int fd);
+static char	*read_line(int fd, char	**save);
 static char	*next_line(char	**save);
 static char	*return_and_free(char	**all);
 
@@ -51,7 +51,7 @@ static char	*next_line(char	**save)
 	return (next_line);
 }
 
-static char	*read_line(int	fd, char	**save)
+static char	*read_line(int fd, char	**save)
 {
 	char	*buf;
 	char	*tmpjoin;
@@ -80,7 +80,7 @@ static char	*read_line(int	fd, char	**save)
 	return (next_line(save));
 }
 
-char	*get_next_line(int	fd)
+char	*get_next_line(int fd)
 {
 	static char	*save;
 
