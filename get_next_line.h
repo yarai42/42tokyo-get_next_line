@@ -6,7 +6,7 @@
 /*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 20:56:57 by yarai             #+#    #+#             */
-/*   Updated: 2022/10/02 12:57:05 by yarai            ###   ########.fr       */
+/*   Updated: 2022/10/06 14:09:59 by yarai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
-# define SSIZE_MAX 2147483647
-//# define BUUFER_SIZE 100
+# include <limits.h>
+
 char	*get_next_line(int fd);
 char	*ft_strjoin(char const	*s1, char const	*s2);
 char	*ft_strldup(const char	*s1, size_t	l);
