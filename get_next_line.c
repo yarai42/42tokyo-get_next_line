@@ -6,7 +6,7 @@
 /*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 20:56:21 by yarai             #+#    #+#             */
-/*   Updated: 2022/10/02 12:58:55 by yarai            ###   ########.fr       */
+/*   Updated: 2022/10/08 11:20:16 by yarai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,9 @@ static char	*next_line(char	**save)
 	}
 	free(*save);
 	*save = tmp;
-	if (next_line[0] == '\0')
+	if (next_line == NULL)
+		return (return_and_free(save));
+	else if (next_line[0] == '\0')
 		return (return_and_free(&next_line));
 	return (next_line);
 }
@@ -59,7 +61,7 @@ static char	*read_line(int fd, char	**save)
 
 	buf = (char *)malloc(sizeof(char) * ((size_t)BUFFER_SIZE + 1));
 	if (buf == NULL)
-		return (NULL);
+		return (return_and_free(save));
 	flag = 1;
 	while (!ft_strchr(*save, '\n') && flag != 0)
 	{
